@@ -9,7 +9,9 @@ pub struct Block {
 }
 
 impl Block{
-    pub fn new(index: u32, timestamp, u128, prev_block_hash, Hash, transactions: Vec, difficulty: u128)->{
+    pub fn new(index: u32, timestamp: u128, prev_block_hash: Hash, transactions: Vec, difficulty: u128)-> Block{ 
         Block{index, timestamp, hash:vec![0;32], prev_block_hash, nonce}
     }
 }
+
+// impl Debug for Block {    fn fmt (&self, f: &mut Formatter) -> fmt::Result {        write!(f, "Block[{}]: {} at: {} with: {} nonce: {}",           &self.index,            &hex::encode(&self.hash),            &self.timestamp,            &self.transactions.len(),            &self.nonce,        )    }}
