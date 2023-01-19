@@ -10,7 +10,7 @@ pub struct Block {
 
 impl Block{
     pub fn new(index: u32, timestamp: u128, prev_block_hash: Hash, transactions: Vec, difficulty: u128)-> Self{ 
-        Block{index, timestamp, hash:vec![0;32], prev_block_hash, nonce}
+        Block{index, timestamp, hash:vec![0;32], prev_block_hash, nonce:0, transactions, difficulty}
     }
 }
 
